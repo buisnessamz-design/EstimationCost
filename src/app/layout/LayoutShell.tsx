@@ -27,11 +27,11 @@ export default function LayoutShell({ children }: LayoutShellProps) {
   }, [location.pathname, isMobile]);
 
   const mainContentWrapperClass = cn(
-    "flex flex-1 flex-col overflow-hidden transition-all duration-200 ease-in-out",
+    "flex min-w-0 flex-1 flex-col overflow-hidden transition-all duration-200 ease-in-out",
   );
 
   return (
-    <div className="flex h-screen bg-background text-foreground">
+    <div className="flex h-dvh bg-background text-foreground">
       <Sidebar
         sidebarOpen={sidebarOpen}
         setSidebarOpen={setSidebarOpen}
@@ -42,7 +42,7 @@ export default function LayoutShell({ children }: LayoutShellProps) {
       <div className={mainContentWrapperClass}>
         <Topbar setSidebarOpen={setSidebarOpen} />
 
-        <main className="flex-1 overflow-y-auto overflow-x-hidden p-4 sm:p-6">
+        <main className="flex-1 overflow-y-auto overflow-x-hidden p-4 pb-24 sm:p-8 md:pb-8">
           {children}
         </main>
 

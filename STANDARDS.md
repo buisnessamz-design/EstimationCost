@@ -1,6 +1,6 @@
 # BinaaCost Engineering Standards
 
-> **Purpose:** Protect the architectural integrity, cent-exact financial precision, offline resilience, bilingual accessibility, and security invariants of BinaaCost.
+> **Purpose:** Protect the architectural integrity, cent-exact financial precision, offline resilience, multilingual accessibility, and security invariants of BinaaCost.
 >
 > **Core principle:** **Be strict about boundaries, flexible about implementations.**
 
@@ -53,7 +53,7 @@ BinaaCost is built upon the following core technologies:
 | **Routing & Navigation** | React Router DOM | `6.30.3` | Client routing, route-level layouts, and authentication guards |
 | **Form Management** | React Hook Form & Zod | RHF `7.71.0`, Zod `3.25.76` | Controlled form state with schema-driven input validation |
 | **Financial Engine** | Decimal.js | `10.6.0` | Cent-exact, half-up rounding arbitrary-precision arithmetic |
-| **Localization (i18n)** | i18next & react-i18next | i18next `23.16.8`, react-i18next `14.1.3` | Bilingual LTR/RTL support (English and Arabic) across 24 namespaces |
+| **Localization (i18n)** | i18next & react-i18next | i18next `23.16.8`, react-i18next `14.1.3` | English, Simplified Chinese and Arabic LTR/RTL support across 27 namespaces |
 | **Data Visualization** | Apache ECharts | `5.6.0` (via `echarts-for-react 3.0.5`) | RTL-aware financial charts, breakdown charts, and scenario curves |
 | **Offline Persistence** | LocalForage & Workbox | LocalForage `1.10.0`, `vite-plugin-pwa 0.20.5` | Client-side IndexedDB mutation queues and Service Worker asset caching |
 | **Backend & Database** | PocketBase | `0.28.0` | Embedded SQLite database, Goja JSVM server hooks, and REST/Realtime APIs |
@@ -67,7 +67,7 @@ Technology versions MAY be updated as part of maintenance; however, the architec
 BinaaCost guarantees:
 - **Cent-exact financial computation** with zero floating-point accumulation drift.
 - **Uninterrupted field operation** during network dropouts with automatic queued replay.
-- **First-class bilingual parity** in both English (LTR) and Arabic (RTL).
+- **First-class translation parity** in English (LTR), Simplified Chinese (LTR), and Arabic (RTL).
 - **Auditability and immutability** for approved project version baselines and system configurations.
 
 ---
@@ -499,16 +499,17 @@ Snapshots with `is_final: true` represent legally binding baselines. The server 
 
 # 11. Internationalization (i18n) & RTL Layouts
 
-BinaaCost provides full, first-class parity for English (LTR) and Arabic (RTL).
+BinaaCost provides interface translations for English (LTR), Simplified Chinese (LTR), and Arabic (RTL).
 
 ## 11.1 Localization Namespaces
 
-Translations are divided into 24 distinct domain namespaces under `public/locales/{en,ar}/`:
+Translations are divided into 27 domain namespaces under `public/locales/{en,zh,ar}/`:
 
 ```text
 public/locales/
 ├── en/               # English translations (source of truth)
-└── ar/               # Arabic translations (mirrored 1:1)
+├── zh/               # Simplified Chinese translations
+└── ar/               # Arabic translations (with Arabic plural forms)
 ```
 
 ## 11.2 No Hardcoded Strings
@@ -541,7 +542,7 @@ Apache ECharts instances MUST invert horizontal axes, tooltips, and legend align
 
 ## 11.6 Translation Parity Testing
 
-The automated test suite includes [src/shared/lib/__tests__/locale-parity.test.ts](file:///home/user/Apps/0Dev/BinaaCost/src/shared/lib/__tests__/locale-parity.test.ts). Every translation key added to `en/*.json` MUST have an equivalent key in `ar/*.json`. CI MUST fail on missing keys.
+The automated test suite includes [src/shared/lib/__tests__/locale-parity.test.ts](file:///home/user/Apps/0Dev/BinaaCost/src/shared/lib/__tests__/locale-parity.test.ts). Every translation key added to `en/*.json` MUST have an equivalent key in `zh/*.json` and `ar/*.json`. CI MUST fail on missing keys.
 
 ---
 

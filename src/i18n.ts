@@ -11,6 +11,7 @@ const namespaces = [
   "errors",
   "roles",
   "durations",
+  "dropdowns",
 
   "project_detail",
   "project_tabs",
@@ -24,6 +25,8 @@ const namespaces = [
   "project_reports",
   "project_versions",
   "project_form",
+  "project_types",
+  "public_share",
 
   "settings",
   "admin",
@@ -37,14 +40,15 @@ i18n
   .use(LanguageDetector)
   .use(initReactI18next)
   .init({
-    supportedLngs: ["en", "ar"],
+    supportedLngs: ["en", "zh", "ar"],
+    load: "languageOnly",
     fallbackLng: "en",
     debug: false,
     ns: namespaces,
     defaultNS: "common",
     detection: {
-      order: ["querystring", "cookie", "localStorage", "path"],
-      caches: ["cookie"],
+      order: ["querystring", "localStorage", "cookie", "navigator"],
+      caches: ["localStorage", "cookie"],
     },
     backend: {
       loadPath: "/locales/{{lng}}/{{ns}}.json",

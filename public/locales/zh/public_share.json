@@ -1,0 +1,19 @@
+{
+  "accessProject": "访问项目",
+  "enterPassword": "请输入密码以查看此项目。",
+  "passwordPlaceholder": "项目密码",
+  "access": "访问",
+  "accessFailed": "无法访问项目，密码错误或链接无效。",
+  "errorLoadingProjectData": "加载项目数据失败，请稍后重试。",
+  "readOnlyView": "只读视图",
+  "incorrectPassword": "密码不正确。",
+  "linkNotFoundOrExpired": "链接不存在或已过期。",
+  "proposalView": "客户方案",
+  "detailedView": "详细明细",
+  "print": "打印",
+  "passwordRequired": "需要密码",
+  "invalidLink": "无效链接",
+  "sharedProject": "共享项目",
+  "linkExpires": "链接到期时间",
+  "sharedByOwner": "项目所有者"
+}

@@ -1,0 +1,16 @@
+{
+  "pageNotFound": "未找到页面",
+  "returnToHome": "返回首页",
+  "unexpectedToast": "发生意外错误，请重试。",
+  "unknown": "发生未知错误。",
+  "boundaryTitle": "出现了一些问题。",
+  "tryAgain": "重试",
+  "goToHomepage": "前往首页",
+  "networkError": "网络错误，请检查网络连接。",
+  "uniqueViolation": "此记录已存在，请使用唯一标识。",
+  "foreignKeyViolation": "此操作引用了不存在的记录，无法完成。",
+  "permissionDenied": "您没有执行此操作的权限。",
+  "resourceNotFound": "未找到所请求的资源。",
+  "timeout": "请求超时，请重试。",
+  "missingRequiredField": "缺少必填字段，请检查输入。"
+}

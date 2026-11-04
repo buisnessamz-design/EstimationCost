@@ -1,0 +1,68 @@
+{
+  "project_type": {
+    "Residential": "住宅",
+    "Commercial": "商业",
+    "Industrial": "工业",
+    "Infrastructure": "基础设施",
+    "Renovation": "翻新"
+  },
+  "project_size_unit": {
+    "sqft": "平方英尺",
+    "sqm": "平方米",
+    "acre": "英亩",
+    "hectare": "公顷"
+  },
+  "duration_unit": {
+    "Day": "天",
+    "Month": "月",
+    "Week": "周",
+    "Year": "年"
+  },
+  "material_unit": {
+    "pcs": "件",
+    "m": "米",
+    "m2": "平方米",
+    "m3": "立方米",
+    "kg": "千克",
+    "ton": "吨",
+    "bag": "袋",
+    "roll": "卷",
+    "set": "套",
+    "box": "箱"
+  },
+  "equipment_rental_purchase": {
+    "Rental": "租赁",
+    "Purchase": "购买"
+  },
+  "equipment_period_unit": {
+    "hour": "小时",
+    "day": "天",
+    "week": "周",
+    "month": "月"
+  },
+  "additional_cost_category": {
+    "Permits": "许可证",
+    "Insurance": "保险",
+    "Transport": "运输",
+    "Utilities": "公用设施",
+    "Testing": "检测",
+    "Contingency": "预备费",
+    "Other": "其他"
+  },
+  "risk_probability": {
+    "Low": "低",
+    "Medium": "中",
+    "High": "高"
+  },
+  "currency": {
+    "USD": "美元",
+    "EUR": "欧元",
+    "GBP": "英镑",
+    "SAR": "沙特里亚尔",
+    "AED": "阿联酋迪拉姆",
+    "CAD": "加拿大元",
+    "AUD": "澳大利亚元",
+    "INR": "印度卢比",
+    "CNY": "人民币"
+  }
+}

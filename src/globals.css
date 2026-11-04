@@ -8,9 +8,9 @@
 
 :root {
   /* Radius */
-  --radius-sm: 0.125rem;   /* 2px */
-  --radius-md: 0.375rem;   /* 6px */
-  --radius-lg: 0.5rem;     /* 8px */
+  --radius-sm: 0.5rem;     /* 8px */
+  --radius-md: 0.75rem;    /* 12px */
+  --radius-lg: 1rem;      /* 16px */
 
   /* Shadows */
   --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
@@ -38,27 +38,27 @@
   --chart-emphasis-shadow: rgba(0, 0, 0, 0.5);
 
   /* Light theme (default) */
-  --background: 0 0% 100%;               /* #FFFFFF */
-  --foreground: 0 0% 0%;                 /* #000000 */
+  --background: 42.86 13.21% 89.61%; /* #E8E6E1 */
+  --foreground: 96.00 6.02% 16.27%; /* #292C27 */
 
-  --card: 0 0% 100%;                     /* #FFFFFF */
-  --card-foreground: 0 0% 0%;            /* #000000 */
+  --card: 50.00 17.65% 93.33%; /* #F1F0EB */
+  --card-foreground: 96.00 6.02% 16.27%; /* #292C27 */
 
-  --popover: 0 0% 100%;                  /* #FFFFFF */
-  --popover-foreground: 0 0% 0%;         /* #000000 */
+  --popover: 45.00 26.67% 94.12%; /* #F4F2EC */
+  --popover-foreground: 96.00 6.02% 16.27%; /* #292C27 */
 
-  --primary: 222 60% 33%;                /* #1E3A8A — blue-900 */
-  --primary-hover: 221 63% 38%;          /* #1E40AF — blue-800 */
-  --primary-foreground: 0 0% 100%;       /* #FFFFFF */
+  --primary: 101.54 12.87% 19.80%; /* #30392C */
+  --primary-hover: 90.00 16.42% 26.27%; /* #434E38 */
+  --primary-foreground: 60.00 20.00% 94.12%; /* #F3F3ED */
 
-  --secondary: 0 0% 20%;                 /* #333333 */
-  --secondary-foreground: 0 0% 100%;     /* #FFFFFF */
+  --secondary: 78.46 16.05% 84.12%; /* #D9DDD0 */
+  --secondary-foreground: 101.54 12.87% 19.80%; /* #30392C */
 
-  --muted: 0 0% 95.3%;                   /* #F3F4F6 — gray-100 */
-  --muted-foreground: 0 0% 42%;          /* #6B7280 — gray-500 */
+  --muted: 66.00 13.51% 85.49%; /* #DEDFD5 */
+  --muted-foreground: 90.00 6.38% 36.86%; /* #5E6458 */
 
-  --accent: 0 0% 95.3%;                  /* #F3F4F6 — gray-100 */
-  --accent-foreground: 0 0% 0%;          /* #000000 */
+  --accent: 78.46 16.05% 84.12%; /* #D9DDD0 */
+  --accent-foreground: 96.00 6.02% 16.27%; /* #292C27 */
 
   --destructive: 0 84% 60%;              /* #EF4444 — red-500 */
   --destructive-foreground: 0 0% 100%;   /* #FFFFFF */
@@ -69,37 +69,37 @@
   --warning: 32 95% 44%;                 /* #D97706 — amber-600 */
   --warning-foreground: 0 0% 100%;       /* #FFFFFF */
 
-  --info: 222 60% 33%;                   /* #1E3A8A — same as primary */
-  --info-foreground: 0 0% 100%;          /* #FFFFFF */
+  --info: 78.86 18.52% 37.06%; /* #65704D */
+  --info-foreground: 0.00 0.00% 100.00%; /* #FFFFFF */
 
-  --border: 0 0% 89.8%;                  /* #E5E7EB — gray-200 */
-  --input: 0 0% 82%;                     /* #D1D5DB — gray-300 */
-  --ring: 222 60% 33%;                   /* #1E3A8A — primary */
+  --border: 75.00 10.53% 77.65%; /* #C9CCC0 */
+  --input: 84.00 10.49% 71.96%; /* #B9BFB0 */
+  --ring: 78.86 18.52% 37.06%; /* #65704D */
 }
 
 .dark {
   /* Dark theme overrides */
-  --background: 222 84% 5%;              /* slate-950 */
-  --foreground: 210 40% 98%;             /* off-white */
+  --background: 108.00 7.46% 13.14%; /* #20241F */
+  --foreground: 50.00 15.00% 92.16%; /* #EEEDE8 */
 
-  --card: 222 47% 11%;                   /* slate-900 (elevated) */
-  --card-foreground: 210 40% 98%;
+  --card: 105.00 9.30% 16.86%; /* #292F27 */
+  --card-foreground: 50.00 15.00% 92.16%; /* #EEEDE8 */
 
-  --popover: 222 47% 11%;                /* slate-900 (elevated) */
-  --popover-foreground: 210 40% 98%;
+  --popover: 101.54 12.87% 19.80%; /* #30392C */
+  --popover-foreground: 50.00 15.00% 92.16%; /* #EEEDE8 */
 
-  --primary: 217 91% 60%;                /* blue-400 */
-  --primary-hover: 217 91% 65%;
-  --primary-foreground: 222 84% 5%;
+  --primary: 80.00 27.27% 74.12%; /* #C3CFAB */
+  --primary-hover: 79.41 34.69% 80.78%; /* #D4DFBD */
+  --primary-foreground: 108.00 7.46% 13.14%; /* #20241F */
 
-  --secondary: 215 28% 17%;              /* slate-800 */
-  --secondary-foreground: 210 40% 98%;
+  --secondary: 96.00 12.61% 23.33%; /* #3A4334 */
+  --secondary-foreground: 50.00 15.00% 92.16%; /* #EEEDE8 */
 
-  --muted: 215 28% 17%;                  /* slate-800 */
-  --muted-foreground: 215 20% 65%;       /* slate-400 */
+  --muted: 100.00 11.11% 21.18%; /* #343C30 */
+  --muted-foreground: 86.67 11.84% 70.20%; /* #B4BCAA */
 
-  --accent: 215 28% 17%;                 /* slate-800 */
-  --accent-foreground: 210 40% 98%;
+  --accent: 91.43 16.03% 25.69%; /* #414C37 */
+  --accent-foreground: 50.00 15.00% 92.16%; /* #EEEDE8 */
 
   --destructive: 0 72% 51%;              /* red-400 */
   --destructive-foreground: 222 84% 5%;
@@ -110,12 +110,12 @@
   --warning: 43 96% 56%;                 /* amber-400 */
   --warning-foreground: 222 84% 5%;
 
-  --info: 217 91% 60%;                   /* blue-400 */
-  --info-foreground: 222 84% 5%;
+  --info: 80.00 27.27% 74.12%; /* #C3CFAB */
+  --info-foreground: 108.00 7.46% 13.14%; /* #20241F */
 
-  --border: 215 28% 17%;                 /* slate-800 */
-  --input: 215 28% 17%;                  /* slate-800 */
-  --ring: 217 91% 60%;                   /* primary */
+  --border: 86.67 12.50% 28.24%; /* #49513F */
+  --input: 88.70 12.99% 34.71%; /* #59644D */
+  --ring: 80.00 27.27% 74.12%; /* #C3CFAB */
 
   /* Chart palette (dark theme) - further desaturated for eye comfort */
   --chart-1: 195 80% 50%;       /* cyan */
@@ -149,19 +149,50 @@
   font-display: swap;
 }
 
-/* Application-wide default */
+/* Local portfolio typefaces keep the UI consistent without third-party font requests. */
+@font-face {
+  font-family: "DM Sans";
+  src: url("/fonts/portfolio/dm-sans-variable.woff") format("woff");
+  font-weight: 100 1000;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Manrope";
+  src: url("/fonts/portfolio/manrope-variable.woff") format("woff");
+  font-weight: 200 800;
+  font-style: normal;
+  font-display: swap;
+}
+
 html {
-  font-family: "Noto Sans Arabic", system-ui, -apple-system, BlinkMacSystemFont,
-    "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-body: "DM Sans", Arial, sans-serif;
+  --font-display: "Manrope", "DM Sans", Arial, sans-serif;
+  font-family: var(--font-body);
   line-height: 1.7;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
 }
 
-/* Latin (English) uses a Latin-first stack; Arabic uses Noto Sans Arabic. */
-html[lang="en"] {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-    Roboto, Helvetica, Arial, sans-serif;
+html:lang(ar) {
+  --font-body: "Noto Sans Arabic", Tahoma, Arial, sans-serif;
+  --font-display: var(--font-body);
+}
+
+html:lang(zh) {
+  --font-body: "DM Sans", "PingFang SC", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif;
+  --font-display: "Manrope", "PingFang SC", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-display);
+  letter-spacing: -0.035em;
+}
+
+html:lang(ar) h1, html:lang(ar) h2, html:lang(ar) h3,
+html:lang(zh) h1, html:lang(zh) h2, html:lang(zh) h3 {
+  letter-spacing: normal;
 }
 
 /* ================================

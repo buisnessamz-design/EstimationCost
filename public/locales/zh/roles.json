@@ -1,0 +1,12 @@
+{
+  "super_admin": "超级管理员",
+  "admin": "管理员",
+  "user": "用户",
+  "editor": "编辑者",
+  "viewer": "查看者",
+  "super_admin_display": "超级管理员",
+  "admin_display": "管理员",
+  "user_display": "用户",
+  "editor_display": "编辑者",
+  "viewer_display": "查看者"
+}

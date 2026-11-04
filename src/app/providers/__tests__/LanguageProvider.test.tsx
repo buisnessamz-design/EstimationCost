@@ -37,6 +37,7 @@ describe("isRtlLanguage", () => {
   it("returns false for LTR languages", () => {
     expect(isRtlLanguage("en")).toBe(false);
     expect(isRtlLanguage("en-US")).toBe(false);
+    expect(isRtlLanguage("zh-CN")).toBe(false);
     expect(isRtlLanguage("fr")).toBe(false);
     expect(isRtlLanguage("es")).toBe(false);
     expect(isRtlLanguage(undefined)).toBe(false);

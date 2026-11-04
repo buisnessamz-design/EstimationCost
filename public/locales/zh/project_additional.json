@@ -1,0 +1,22 @@
+{
+  "title": "附加费用",
+  "noItems": "尚未添加附加费用",
+  "columns": {
+    "category": "类别",
+    "categoryPlaceholder": "选择类别",
+    "description": "说明",
+    "descriptionPlaceholder": "此项费用的详细说明",
+    "amount": "金额",
+    "amountPlaceholder": "例如：1000.00",
+    "grandTotal": "总计",
+    "group": "分组"
+  },
+  "categoryRequired": "请选择类别",
+  "descriptionRequired": "请输入说明",
+  "amountError": "金额不能为负数",
+  "add": "添加附加费用",
+  "edit": "编辑附加费用",
+  "amountNonNegative": "金额不能为负数",
+  "tableLabel": "附加费用表",
+  "formula": "公式"
+}

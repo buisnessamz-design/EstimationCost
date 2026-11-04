@@ -13,7 +13,7 @@ export function useSettingsOptions(
   category: string,
   includeNumericValue = false,
 ) {
-  const { i18n } = useTranslation();
+  const { t, i18n } = useTranslation("dropdowns");
   const { role } = useAuth();
   const { useQuery } = useOfflinePb();
 
@@ -36,7 +36,10 @@ export function useSettingsOptions(
         const tr = r.translations as Record<string, string> | null;
         return {
           value: r.value as string,
-          label: tr?.[i18n.language] ?? (r.value as string),
+          label:
+            tr?.[i18n.resolvedLanguage || i18n.language] ||
+            tr?.[i18n.language.split("-")[0]] ||
+            t(`${category}.${r.value}`, { defaultValue: r.value as string }),
           numeric_value: r.numeric_value as number | null,
         };
       });

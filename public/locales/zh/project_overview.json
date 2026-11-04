@@ -1,0 +1,29 @@
+{
+  "title": "项目概览",
+  "type": "项目类型",
+  "size": "项目规模",
+  "location": "地点",
+  "duration": "项目工期",
+  "clientRequirements": "客户要求",
+  "description": "说明",
+  "notSpecified": "未指定",
+  "grandTotal": "总计",
+  "directCosts": "直接费用",
+  "profit": "加价",
+  "grossMarginHint": "毛利率 {{percent}}%",
+  "costBreakdown": "成本明细",
+  "attention": "需要关注",
+  "allGood": "暂无需要关注的事项。",
+  "incompleteItems_one": "{{count}} 个费用项缺少成本数据或成本为零",
+  "incompleteItems_other": "{{count}} 个费用项缺少成本数据或成本为零",
+  "unconfirmedSettings": "尚未审核或保存财务设置，当前使用默认假设",
+  "lastEdited": "上次编辑于 {{date}}",
+  "details": "项目信息",
+  "addCosts": "添加费用",
+  "categories": {
+    "materials": "材料",
+    "labor": "人工",
+    "equipment": "设备",
+    "additional": "附加费用"
+  }
+}

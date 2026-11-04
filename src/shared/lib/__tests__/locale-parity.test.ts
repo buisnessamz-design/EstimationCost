@@ -2,13 +2,13 @@ import { describe, it, expect } from "vitest";
 import { readdirSync, readFileSync } from "node:fs";
 import { join } from "node:path";
 
-// EN/AR key-parity regression test. Every key present in the English locale
+// Locale key and interpolation parity regression test. Every key present in the English locale
 // must exist in the Arabic locale (and vice-versa) so no raw key leaks into
 // the UI. Mirrors the P1 finding where `profit_pricing.viewPricing` existed
 // only in Arabic and rendered as a raw key in English.
 
 const EN_DIR = join(process.cwd(), "public", "locales", "en");
-const AR_DIR = join(process.cwd(), "public", "locales", "ar");
+const LOCALE_DIR = join(process.cwd(), "public", "locales");
 
 function flatten(obj: Record<string, unknown>, prefix = ""): string[] {
   const keys: string[] = [];
@@ -49,48 +49,34 @@ function load(dir: string): Record<string, Record<string, unknown>> {
   return out;
 }
 
-describe("locale key parity", () => {
+describe.each(["ar", "zh"])("locale key parity (%s)", (language) => {
   const en = load(EN_DIR);
-  const ar = load(AR_DIR);
+  const locale = load(join(LOCALE_DIR, language));
 
-  it("has the same set of namespace files", () => {
-    expect(Object.keys(ar).sort()).toEqual(Object.keys(en).sort());
+  it("has the same namespace files as English", () => {
+    expect(Object.keys(locale).sort()).toEqual(Object.keys(en).sort());
   });
 
-  it("has no missing or extra keys in either language", () => {
+  it("preserves translation keys and interpolation variables", () => {
     for (const [file, enNs] of Object.entries(en)) {
-      const arNs = ar[file];
-      if (!arNs) continue;
-      // Compare with plural suffixes normalized so language-specific plural
-      // categories (Arabic has fewer/more than English) don't false-positive.
-      const enKeys = flatten(enNs).map(stripPluralSuffix).sort();
-      const arKeys = flatten(arNs).map(stripPluralSuffix).sort();
-      const enSet = [...new Set(enKeys)];
-      const arSet = [...new Set(arKeys)];
-      const missingInAr = enSet.filter((k) => !arSet.includes(k));
-      const missingInEn = arSet.filter((k) => !enSet.includes(k));
-      expect(missingInAr, `${file}: keys missing in ar`).toEqual([]);
-      expect(missingInEn, `${file}: keys missing in en`).toEqual([]);
-    }
-  });
-
-  it("has no empty translation values", () => {
-    for (const [file, ns] of Object.entries(en)) {
+      const ns = locale[file];
+      expect(ns, file).toBeDefined();
+      const enKeys = [...new Set(flatten(enNs).map(stripPluralSuffix))].sort();
+      const localeKeys = [...new Set(flatten(ns).map(stripPluralSuffix))].sort();
+      expect(localeKeys, `${language}/${file}`).toEqual(enKeys);
       for (const key of flatten(ns)) {
-        const val = key.split(".").reduce<any>((o, p) => o?.[p], ns);
-        expect(
-          typeof val === "string" && val.trim() === "",
-          `${file}:${key} is empty in en`,
-        ).toBe(false);
-      }
-    }
-    for (const [file, ns] of Object.entries(ar)) {
-      for (const key of flatten(ns)) {
-        const val = key.split(".").reduce<any>((o, p) => o?.[p], ns);
-        expect(
-          typeof val === "string" && val.trim() === "",
-          `${file}:${key} is empty in ar`,
-        ).toBe(false);
+        const value = key.split(".").reduce<any>((obj, part) => obj?.[part], ns);
+        expect(typeof value === "string" && value.trim() === "", `${file}:${key}`).toBe(false);
+        const source = key.split(".").reduce<any>((obj, part) => obj?.[part], enNs);
+        if (typeof source === "string" && typeof value === "string") {
+          // Arabic singular and dual forms can express count grammatically.
+          const grammaticalCount = language === "ar" && /_(one|two)$/.test(key);
+          const variables = (text: string) => [...text.matchAll(/{{\s*([^}]+?)\s*}}/g)]
+            .map((m) => m[1])
+            .filter((name) => !(grammaticalCount && name === "count"))
+            .sort();
+          expect(variables(value), `${language}/${file}:${key}`).toEqual(variables(source));
+        }
       }
     }
   });

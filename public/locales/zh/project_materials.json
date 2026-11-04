@@ -1,0 +1,28 @@
+{
+  "title": "材料",
+  "noItems": "尚未添加材料",
+  "columns": {
+    "name": "名称",
+    "namePlaceholder": "例如：混凝土、钢材、砖",
+    "description": "说明",
+    "descriptionPlaceholder": "材料的补充说明",
+    "quantity": "数量",
+    "quantityPlaceholder": "例如：100",
+    "unit": "单位",
+    "unitPlaceholder": "选择单位",
+    "unitPrice": "单价",
+    "unitPricePlaceholder": "例如：5.99",
+    "estTotalCost": "估算总额",
+    "grandTotal": "总计",
+    "group": "分组"
+  },
+  "nameRequired": "请输入名称",
+  "quantityNonNegative": "数量不能为负数",
+  "unitRequired": "请选择单位",
+  "priceNonNegative": "单价不能为负数",
+  "add": "添加材料",
+  "edit": "编辑材料",
+  "quantityMin": "数量至少为 1",
+  "tableLabel": "材料费用表",
+  "formula": "公式"
+}

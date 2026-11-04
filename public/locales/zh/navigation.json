@@ -1,0 +1,14 @@
+{
+  "dashboard": "项目",
+  "analytics": "分析",
+  "costLibrary": "成本库",
+  "resources": "资源",
+  "costDatabases": "成本数据库",
+  "settings": "设置",
+  "adminPanel": "管理面板",
+  "openSidebar": "打开侧边栏",
+  "logout": "退出登录",
+  "dataImport": "数据导入",
+  "assemblies": "组合项",
+  "mobileNavigation": "移动端导航"
+}

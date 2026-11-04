@@ -11,7 +11,7 @@ export default defineConfig({
       registerType: "autoUpdate",
       injectRegister: "auto",
       workbox: {
-        globPatterns: ["**/*.{js,css,html,ico,png,svg,webmanifest}"],
+        globPatterns: ["**/*.{js,css,html,ico,png,svg,webmanifest}", "locales/**/*.json", "fonts/**/*.{woff,woff2}"],
         cleanupOutdatedCaches: true,
         sourcemap: true,
         navigateFallbackDenylist: [/^\/_/, /^\/api/],
@@ -21,7 +21,8 @@ export default defineConfig({
         short_name: "Cost Estimator",
         description:
           "An application for managing construction cost estimations.",
-        theme_color: "#ffffff",
+        theme_color: "#e8e6e1",
+        background_color: "#e8e6e1",
         icons: [
           {
             src: "/pwa-192x192.png",
