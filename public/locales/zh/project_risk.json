@@ -1,0 +1,25 @@
+{
+  "title": "风险管理",
+  "noItems": "尚未识别风险",
+  "fields": {
+    "description": "说明",
+    "probability": "概率",
+    "impactAmount": "影响金额",
+    "mitigationPlan": "应对计划",
+    "riskContingency": "风险预备费",
+    "descriptionRequired": "请输入说明",
+    "probabilityRequired": "请选择概率",
+    "impactAmountError": "影响金额不能为负数",
+    "riskContingencyError": "风险预备费不能为负数"
+  },
+  "totalRiskContingency": "风险预备费总额",
+  "formulaHint": "风险预备费 = Σ 影响金额 × 概率权重（低 ×0.1 · 中 ×0.3 · 高 ×0.5）。此项与“定价”中的一般预备费百分比独立，两者相加，不能互相替代。",
+  "seeAlsoPricing": "另请参阅：利润与定价",
+  "add": "添加风险",
+  "edit": "编辑风险",
+  "probabilityOptions": {
+    "low": "低",
+    "medium": "中",
+    "high": "高"
+  }
+}

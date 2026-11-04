@@ -1,7 +1,8 @@
+import LanguageSwitcher from "@/shared/components/LanguageSwitcher";
 import { useState, useMemo } from "react";
 import { useParams } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import { AlertTriangle, Globe, Printer, ShieldCheck } from "lucide-react";
+import { AlertTriangle, Printer, ShieldCheck } from "lucide-react";
 import LoadingState from "@/shared/components/ui/LoadingState";
 import { Card, CardContent, CardHeader, CardTitle } from "@/shared/components/ui/card";
 import { Alert, AlertDescription, AlertTitle } from "@/shared/components/ui/alert";
@@ -23,7 +24,7 @@ import { useReportSettings } from "@/features/settings";
 
 export default function PublicShare() {
   const { accessToken } = useParams<{ accessToken: string }>();
-  const { t, i18n } = useTranslation([
+  const { t } = useTranslation([
     "public_share",
     "common",
     "project_detail",
@@ -34,10 +35,6 @@ export default function PublicShare() {
   const { format: _formatCurrency } = useCurrencyFormatter();
   const { formatDate } = useDateFormatter();
 
-  const toggleLanguage = () => {
-    const newLang = i18n.language.startsWith("en") ? "ar" : "en";
-    i18n.changeLanguage(newLang);
-  };
 
   const { options: materialUnits } = useSettingsOptions("material_unit");
   const { options: periodUnits } = useSettingsOptions("equipment_period_unit");
@@ -94,18 +91,7 @@ export default function PublicShare() {
     return (
       <div className="flex flex-col min-h-screen bg-background">
         <header className="flex justify-end p-4 border-b border-border">
-          <Button
-            variant="ghost"
-            size="sm"
-            onClick={toggleLanguage}
-            className="text-sm font-medium"
-            aria-label={t("common:switchLanguage")}
-          >
-            <Globe className="h-4 w-4 me-1.5" />
-            {i18n.language.startsWith("en")
-              ? t("common:languageNameAr")
-              : t("common:languageNameEn")}
-          </Button>
+          <LanguageSwitcher />
         </header>
         <div className="flex flex-1 items-center justify-center p-4">
           <Card className="w-full max-w-md">
@@ -221,18 +207,7 @@ export default function PublicShare() {
           </div>
 
           <div className="flex items-center gap-2">
-            <Button
-              variant="ghost"
-              size="sm"
-              onClick={toggleLanguage}
-              className="text-xs font-medium h-8 px-2.5"
-              aria-label={t("common:switchLanguage")}
-            >
-              <Globe className="h-3.5 w-3.5 me-1.5" />
-              {i18n.language.startsWith("en")
-                ? t("common:languageNameAr")
-                : t("common:languageNameEn")}
-            </Button>
+            <LanguageSwitcher />
             <Button
               variant="outline"
               size="sm"

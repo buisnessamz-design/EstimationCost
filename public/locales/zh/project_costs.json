@@ -1,0 +1,8 @@
+{
+  "csiDivision": "CSI 分部",
+  "csiCode": "CSI 编码",
+  "csiDivisionPlaceholder": "例如：03",
+  "csiCodePlaceholder": "例如：03 30 00",
+  "csiDivisionRequired": "请填写 CSI 分部",
+  "csiCodeRequired": "请填写 CSI 编码"
+}

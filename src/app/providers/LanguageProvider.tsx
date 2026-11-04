@@ -10,6 +10,7 @@ export default function LanguageProvider({
   children: React.ReactNode;
 }) {
   const { i18n } = useTranslation();
+  const language = i18n.resolvedLanguage || i18n.language;
   const isRtl =
     (typeof i18n.dir === "function" && i18n.dir() === "rtl") ||
     isRtlLanguage(i18n.language);
@@ -20,17 +21,17 @@ export default function LanguageProvider({
   // changes and also updates the document <title>.
   if (typeof document !== "undefined") {
     document.documentElement.dir = dir;
-    document.documentElement.lang = i18n.language;
+    document.documentElement.lang = language;
   }
 
   useEffect(() => {
     document.documentElement.dir = dir;
-    document.documentElement.lang = i18n.language;
+    document.documentElement.lang = language;
     const title = i18n.t("common:appTitle");
     if (title && title !== "common:appTitle") {
       document.title = title;
     }
-  }, [dir, i18n]);
+  }, [dir, i18n, language]);
 
   return <DirectionProvider dir={dir}>{children}</DirectionProvider>;
 }

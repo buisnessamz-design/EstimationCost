@@ -99,7 +99,7 @@ const Sidebar: React.FC<SidebarProps> = ({
               <img
                 src="/logo.svg"
                 alt={t("common:appTitle")}
-                className="h-8 w-auto"
+                className="h-8 w-auto grayscale"
               />
             ) : (
               <Home className="h-6 w-6" />
@@ -128,9 +128,9 @@ const Sidebar: React.FC<SidebarProps> = ({
                 key={item.name}
                 to={item.href}
                 className={cn(
-                  "flex items-center gap-3 rounded-md px-3 py-2 text-sm font-medium transition-colors",
+                  "flex items-center gap-3 rounded-full px-4 py-3 text-sm font-medium transition-colors",
                   isActive(item.href)
-                    ? "bg-muted text-primary"
+                    ? "bg-primary text-primary-foreground"
                     : "text-muted-foreground hover:bg-muted hover:text-foreground",
                   isCollapsed && "justify-center px-0",
                 )}
@@ -140,7 +140,7 @@ const Sidebar: React.FC<SidebarProps> = ({
                   className={cn("h-4 w-4", isCollapsed && "mx-auto")}
                 />
                 {!isCollapsed && (
-                  <span className="whitespace-nowrap">{item.name}</span>
+                  <span className="min-w-0 break-words">{item.name}</span>
                 )}
               </Link>
             ))}
@@ -153,9 +153,9 @@ const Sidebar: React.FC<SidebarProps> = ({
                 <Link
                   to="/admin"
                   className={cn(
-                    "flex items-center gap-3 rounded-md px-3 py-2 text-sm font-medium transition-colors",
+                    "flex items-center gap-3 rounded-full px-4 py-3 text-sm font-medium transition-colors",
                     isActive("/admin")
-                      ? "bg-muted text-primary"
+                      ? "bg-primary text-primary-foreground"
                       : "text-muted-foreground hover:bg-muted hover:text-foreground",
                     isCollapsed && "justify-center px-0",
                   )}
@@ -165,7 +165,7 @@ const Sidebar: React.FC<SidebarProps> = ({
                     className={cn("h-4 w-4", isCollapsed && "mx-auto")}
                   />
                   {!isCollapsed && (
-                    <span className="whitespace-nowrap">{t("navigation:adminPanel")}</span>
+                    <span className="min-w-0 break-words">{t("navigation:adminPanel")}</span>
                   )}
                 </Link>
               </nav>
@@ -186,7 +186,7 @@ const Sidebar: React.FC<SidebarProps> = ({
                 className={cn("h-4 w-4", isCollapsed ? "mx-auto" : "me-3")}
               />
               {!isCollapsed && (
-                <span className="whitespace-nowrap">{t("common:logout")}</span>
+                <span className="min-w-0 break-words">{t("common:logout")}</span>
               )}
             </Button>
           </div>
@@ -224,7 +224,7 @@ const Sidebar: React.FC<SidebarProps> = ({
                 <ChevronLeft className={cn("h-5 w-5", getIconMarginClass())} />
               )}
               {!isCollapsed && (
-                <span className="whitespace-nowrap">
+                <span className="min-w-0 break-words">
                   {t("common:collapseSidebar")}
                 </span>
               )}

@@ -1,0 +1,68 @@
+{
+  "project_type": {
+    "Residential": "Residential",
+    "Commercial": "Commercial",
+    "Industrial": "Industrial",
+    "Infrastructure": "Infrastructure",
+    "Renovation": "Renovation"
+  },
+  "project_size_unit": {
+    "sqft": "sqft",
+    "sqm": "sqm",
+    "acre": "acre",
+    "hectare": "hectare"
+  },
+  "duration_unit": {
+    "Day": "Day",
+    "Month": "Month",
+    "Week": "Week",
+    "Year": "Year"
+  },
+  "material_unit": {
+    "pcs": "pcs",
+    "m": "m",
+    "m2": "m²",
+    "m3": "m³",
+    "kg": "kg",
+    "ton": "ton",
+    "bag": "bag",
+    "roll": "roll",
+    "set": "set",
+    "box": "box"
+  },
+  "equipment_rental_purchase": {
+    "Rental": "Rental",
+    "Purchase": "Purchase"
+  },
+  "equipment_period_unit": {
+    "hour": "hour",
+    "day": "day",
+    "week": "week",
+    "month": "month"
+  },
+  "additional_cost_category": {
+    "Permits": "Permits",
+    "Insurance": "Insurance",
+    "Transport": "Transport",
+    "Utilities": "Utilities",
+    "Testing": "Testing",
+    "Contingency": "Contingency",
+    "Other": "Other"
+  },
+  "risk_probability": {
+    "Low": "Low",
+    "Medium": "Medium",
+    "High": "High"
+  },
+  "currency": {
+    "USD": "US Dollar",
+    "EUR": "Euro",
+    "GBP": "British Pound",
+    "SAR": "Saudi Riyal",
+    "AED": "UAE Dirham",
+    "CAD": "Canadian Dollar",
+    "AUD": "Australian Dollar",
+    "INR": "Indian Rupee",
+    "CNY": "Chinese Yuan"
+  }
+}

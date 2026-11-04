@@ -1,0 +1,20 @@
+{
+  "overview": "概览",
+  "costs": "费用",
+  "risks": "风险",
+  "scenarioAnalysis": "情景分析",
+  "profitPricing": "利润与定价",
+  "analytics": "分析",
+  "reports": "报告",
+  "versions": "版本",
+  "materials": "材料",
+  "labor": "人工",
+  "equipment": "设备",
+  "additional": "附加费用",
+  "selectTab": "选择选项卡",
+  "groups": "分组",
+  "groupOverview": "概览",
+  "groupEstimate": "估算",
+  "groupPricing": "定价",
+  "groupReview": "审核"
+}

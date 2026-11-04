@@ -1,0 +1,26 @@
+{
+  "title": "人工",
+  "noItems": "尚未添加人工费用项",
+  "columns": {
+    "workerType": "工种",
+    "workerTypePlaceholder": "例如：木工、普工、电工",
+    "numWorkers": "工人数",
+    "numWorkersPlaceholder": "例如：5",
+    "dailyRate": "日工资",
+    "dailyRatePlaceholder": "例如：100.00",
+    "totalDays": "总天数",
+    "totalDaysPlaceholder": "例如：10",
+    "estTotalCost": "估算总额",
+    "grandTotal": "总计",
+    "description": "说明",
+    "group": "分组"
+  },
+  "workerTypeRequired": "请输入工种",
+  "numWorkersMin": "工人数至少为 1",
+  "dailyRateNonNegative": "日工资不能为负数",
+  "totalDaysMin": "总天数必须大于 0",
+  "add": "添加人工费用项",
+  "edit": "编辑人工费用项",
+  "tableLabel": "人工费用表",
+  "formula": "公式"
+}

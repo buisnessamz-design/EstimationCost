@@ -1,0 +1,68 @@
+{
+  "project_type": {
+    "Residential": "سكني",
+    "Commercial": "تجاري",
+    "Industrial": "صناعي",
+    "Infrastructure": "بنية تحتية",
+    "Renovation": "تجديد"
+  },
+  "project_size_unit": {
+    "sqft": "قدم²",
+    "sqm": "م²",
+    "acre": "فدان",
+    "hectare": "هكتار"
+  },
+  "duration_unit": {
+    "Day": "يوم",
+    "Month": "شهر",
+    "Week": "أسبوع",
+    "Year": "سنة"
+  },
+  "material_unit": {
+    "pcs": "قطعة",
+    "m": "متر",
+    "m2": "م²",
+    "m3": "م³",
+    "kg": "كجم",
+    "ton": "طن",
+    "bag": "كيس",
+    "roll": "لفة",
+    "set": "مجموعة",
+    "box": "صندوق"
+  },
+  "equipment_rental_purchase": {
+    "Rental": "إيجار",
+    "Purchase": "شراء"
+  },
+  "equipment_period_unit": {
+    "hour": "ساعة",
+    "day": "يوم",
+    "week": "أسبوع",
+    "month": "شهر"
+  },
+  "additional_cost_category": {
+    "Permits": "تصاريح",
+    "Insurance": "تأمين",
+    "Transport": "نقل",
+    "Utilities": "مرافق",
+    "Testing": "اختبارات",
+    "Contingency": "احتياطي",
+    "Other": "أخرى"
+  },
+  "risk_probability": {
+    "Low": "منخفض",
+    "Medium": "متوسط",
+    "High": "عالي"
+  },
+  "currency": {
+    "USD": "دولار أمريكي",
+    "EUR": "يورو",
+    "GBP": "جنيه إسترليني",
+    "SAR": "ريال سعودي",
+    "AED": "درهم إماراتي",
+    "CAD": "دولار كندي",
+    "AUD": "دولار أسترالي",
+    "INR": "روبية هندية",
+    "CNY": "人民币"
+  }
+}

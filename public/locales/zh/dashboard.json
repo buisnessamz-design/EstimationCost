@@ -1,0 +1,18 @@
+{
+  "title": "项目",
+  "searchPlaceholder": "搜索",
+  "createNew": "创建新项目",
+  "myProjects": "我的项目",
+  "noProjects": "未找到项目。请先创建项目！",
+  "sharedWithMe": "与我共享",
+  "noSharedProjects": "暂无共享项目。",
+  "viewProject": "查看项目 {{projectName}}",
+  "viewSharedProject": "查看共享项目 {{projectName}}",
+  "projects": "个项目",
+  "sharedBy": "由 {{email}} 共享",
+  "createFirstProject": "创建您的第一个项目",
+  "shared": "已共享",
+  "finalized": "已定稿",
+  "duplicateProject": "复制项目 {{projectName}}",
+  "noDate": "无日期"
+}

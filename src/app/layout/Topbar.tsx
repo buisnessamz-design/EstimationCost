@@ -1,3 +1,4 @@
+import LanguageSwitcher from "@/shared/components/LanguageSwitcher";
 import React from "react";
 import { Link } from "react-router-dom";
 import { pb } from "@/integrations/pocketbase/client";
@@ -23,7 +24,7 @@ interface TopbarProps {
 }
 
 const Topbar: React.FC<TopbarProps> = ({ setSidebarOpen }) => {
-  const { t, i18n } = useTranslation(["navigation", "common"]);
+  const { t } = useTranslation(["navigation", "common"]);
   const { user, signOut } = useAuth();
   const { profile } = useProfile();
   const isMobile = useIsMobile();
@@ -34,10 +35,6 @@ const Topbar: React.FC<TopbarProps> = ({ setSidebarOpen }) => {
       ? `${profile.first_name} ${profile.last_name}`
       : user?.email;
 
-  const toggleLanguage = () => {
-    const newLang = i18n.language === "en" ? "ar" : "en";
-    i18n.changeLanguage(newLang);
-  };
 
   return (
     <header className="sticky top-0 z-sticky flex h-16 items-center justify-between gap-4 border-b border-border bg-card px-4 sm:px-6">
@@ -59,7 +56,7 @@ const Topbar: React.FC<TopbarProps> = ({ setSidebarOpen }) => {
         >
           <img
             src="/logo.svg"
-            alt="Cost Estimator Logo"
+            alt={t("common:appTitle")}
             className="h-7 w-auto"
           />
         </Link>
@@ -84,17 +81,7 @@ const Topbar: React.FC<TopbarProps> = ({ setSidebarOpen }) => {
           )}
         </Button>
 
-        <Button
-          variant="ghost"
-          size="sm"
-          onClick={toggleLanguage}
-          className="text-sm font-medium text-foreground"
-          aria-label={t("common:switchLanguage")}
-        >
-          {i18n.language === "en"
-            ? t("common:languageNameAr")
-            : t("common:languageNameEn")}
-        </Button>
+        <LanguageSwitcher />
 
         <DropdownMenu>
           <DropdownMenuTrigger asChild>

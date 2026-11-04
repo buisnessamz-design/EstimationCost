@@ -19,16 +19,16 @@ export default function PageHeader({
   className,
 }: PageHeaderProps) {
   return (
-    <div className={cn("space-y-2", className)}>
+    <div className={cn("space-y-3 pb-5 border-b border-border", className)}>
       {breadcrumb && <Breadcrumbs />}
       <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
         <div className="space-y-1">
-          <Heading level={1}>{title}</Heading>
+          <Heading level={1} className="font-medium tracking-tight">{title}</Heading>
           {description && (
             <p className="text-sm text-muted-foreground">{description}</p>
           )}
         </div>
-        {actions && <div className="flex gap-2">{actions}</div>}
+        {actions && <div className="flex flex-wrap gap-2">{actions}</div>}
       </div>
     </div>
   );
